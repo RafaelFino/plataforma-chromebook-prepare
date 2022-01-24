@@ -20,12 +20,8 @@ rm -rf fonts
 
 #install exa (new LS)
 wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
-unzip exa-linux-x86_64-v0.10.0.zip
-sudo mv exa-linux-x86_64 /usr/bin/exa
+sudo unzip -o -j exa-linux-x86_64-v0.10.0.zip "bin/exa" -d /usr/bin 
 rm exa-linux-x86_64-v0.10.0.zip
-rm -rf bin
-rm -rf man
-rm -rf completions
 
 #install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
